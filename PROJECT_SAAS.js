@@ -2,7 +2,7 @@ const prompt = require("prompt-sync")();
 
 let livres = [];
 let abonnes = [];
-
+let emprunts=[];
 
 
 let compt1 = 1;
@@ -94,7 +94,18 @@ function afficherAbonnes() {
 }
 
 
-function emprunterLivre() {}
+function emprunterLivre() {
+  let id_abonne = parseInt(prompt("Id de l’abonné :"));
+  let id_livree = parseInt(prompt("Id du livre :"));
+  let livre = livres.find(l => l.id_livre === id_livree && l.disponible);
+  if (!livre) {
+    console.log(" Livre non disponible ou inexistant");
+    return;
+  }
+  emprunts.push({ id_abonne, id_livree });
+  console.log("Livre" ,livre.titre, "emprunté par abonné" ,id_abonne);
+   livre.disponible = false;
+}
 
 function retournerLivre() {}
 
