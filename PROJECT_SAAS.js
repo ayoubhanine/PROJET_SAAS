@@ -62,7 +62,14 @@ function trierLivresParAnnee() {
 
 function afficherLivresDisponibles() {
   console.log(" Livres disponibles :");
-  livres.filter(l => l.disponible).forEach(l => console.log(l.id_livre,l.titre));
+  for(let i=0;i<livres.length;i++){
+       if(livres[i].disponible==true){
+            console.log(livres[i].id_livre,livres[i].titre)
+            return;
+       }
+    
+    }
+  console.log("0")
 }
 
 function rechercherLivreParId() {
