@@ -65,11 +65,11 @@ function afficherLivresDisponibles() {
   for(let i=0;i<livres.length;i++){
        if(livres[i].disponible==true){
             console.log(livres[i].id_livre,livres[i].titre)
-            return;
+           
        }
     
     }
-  console.log("0")
+ 
 }
 
 function rechercherLivreParId() {
