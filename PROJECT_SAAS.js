@@ -53,7 +53,7 @@ function trierLivresParTitre() {
     return;
   }
 
-  afficherLivres(livres);
+  afficherLivres();
 }
 function trierLivresParAnnee() {
   livres.sort((a, b) => a.annee - b.annee);
