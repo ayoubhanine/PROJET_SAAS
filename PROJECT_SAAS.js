@@ -18,6 +18,10 @@ function ajouterLivre() {
 }
 
 function afficherLivres() {
+  if(livres.length===0){
+    console.log("aucun livre trouvee")
+    return;
+  }
   console.log(" Liste des livres :");
   for(let i=0;i<livres.length;i++){
     console.log(livres[i])
