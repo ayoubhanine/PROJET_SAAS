@@ -76,8 +76,8 @@ function rechercherLivreParId() {
   let id = parseInt(prompt("Id du livre à rechercher :"));
   for(let i=0;i<livres.length;i++){
     if(id==livres[i].id_livre){
-        console.log(" Livre trouvé :",livres[i])
-    }
+        console.log(" Livre trouvé :",livres[i]);
+        return; }
   }
   console.log("aucun Livre avec ce ID");
 }
